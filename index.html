@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Café Aurora</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fffdf9;
+    }
+
+    header {
+      background: url('https://valcorcre.com/wp-content/uploads/2020/09/coffee-shop-1209863_1920-1536x864.jpg') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-overlay h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      background-color: #d4af37;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #b38e2f;
+      color: white;
+    }
+
+    nav {
+      background-color: #2f2f2f;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #3e3e3e;
+      margin-bottom: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #d4af37;
+      border: none;
+      border-radius: 5px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 20px auto;
+      font-style: italic;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero-overlay">
+      <h1>Welcome to Cafe Aurora</h1>
+      <div class="hero-buttons">
+        <a href="#order" class="btn">Order Now</a>
+        <a href="#reservation" class="btn">Reserve a Table</a>
+        <a href="#menu" class="btn">View Menu</a>
+        <a href="#contact" class="btn">Find Us</a>
+        <a href="tel:+911234567890" class="btn">Call Us</a>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About Us</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <p>Explore our handcrafted coffees, snacks, and pastries.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Coffee Day</h2>
+    <p>At Coffee Day, we blend luxury with warmth. Our café offers a tranquil space with rich brews and elegant ambiance.</p>
+  </section>
+
+  <section id="order">
+    <h2>Order Online</h2>
+    <p>Coming soon! Stay tuned for our online ordering system.</p>
+  </section>
+
+  <section id="reservation">
+    <h2>Reserve a Table</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <input type="datetime-local" required><br>
+      <textarea placeholder="Any special requests?" rows="4"></textarea><br>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section id="gallery">
+    <h2>Instagram Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&h=150&fit=crop" alt="gallery">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=201&h=150&fit=crop" alt="gallery">
+      <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=203&h=150&fit=crop" alt="gallery">
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Customer Reviews</h2>
+    <div class="testimonial">"Absolutely loved the ambience and their cappuccino is heavenly!" – Aditi R.</div>
+    <div class="testimonial">"Perfect spot to relax, meet friends, or get work done. Highly recommended." – Karan M.</div>
+  </section>
+
+  <section id="contact">
+    <h2>Find Us</h2>
+    <p>123 Brew Street, Coffee City, IN</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.884680915269!2d-122.08424958469262!3d37.422065779826616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5d43b0e6c47%3A0x3a6e352d46dd0b88!2sGoogleplex!5e0!3m2!1sen!2sin!4v1623858505560!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+</body>
+</html>
